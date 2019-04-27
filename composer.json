@@ -1,6 +1,15 @@
 {
     "name": "informational/sportssimulator",
     "description": "This package allow yuo to simulate a number of sports.  Included is the basketball module.",
+    "license": "(LGPL-2.1-only or GPL-3.0-or-later)",
+    "authors": [
+        {
+            "name": "softwaredeveloperca",
+            "email": "rob@phpdeveloper.ca",
+            "homepage": "http://www.software-developer.ca",
+            "role": "Developer"
+        }
+    ], 
     "require": {
         "php": "^5.2"
     }
