@@ -1,0 +1,7 @@
+{
+    "name": "informational/sportssimulator",
+    "description": "This package allow yuo to simulate a number of sports.  Included is the basketball module.",
+    "require": {
+        "php": "^5.2",
+    }
+}
