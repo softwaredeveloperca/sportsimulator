@@ -9,8 +9,5 @@
             "homepage": "http://www.software-developer.ca",
             "role": "Developer"
         }
-    ], 
-    "require": {
-        "php": "^5.2"
-    }
+    ]
 }
