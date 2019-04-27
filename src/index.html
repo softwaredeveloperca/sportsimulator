@@ -1,0 +1,46 @@
+<?
+require("include.php");
+require("Game.php");
+
+if($_REQUEST['GO'] != ""){
+	$SportName=$_REQUEST['SportName'];
+    $DBClass=new DBClass($SportName);
+    $Game=new Game($SportName, $DBClass);
+	
+	if($_REQUEST['GO'] == "Sim"){
+    	$Game->runSingleGame();
+	} 
+	else if($_REQUEST['GO'] == "Setup"){
+   	 	$Game->createSeason();
+	}
+	else if($_REQUEST['GO'] == "PlayGame"){
+		$GameID=1;
+		$Game->playGame($GameID);
+	}
+	else if($_REQUEST['GO'] == "PlaySeason"){
+		$Game->playSeason();
+	}	
+}
+mysql_select_db ("Simulation");
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sim Menu</title>
+</head>
+<body>
+<form action="" method="post">
+<select name="SportName">
+<?
+$re=mysql_query("select * from Sports order by Name desc") or die(mysql_error());
+while($rw=mysql_fetch_array($re)){
+?>
+<option value="<? echo stripslashes($rw['Name']); ?>"><? echo stripslashes($rw['Name']); ?></option>
+<?
+}
+?>
+</select> <input type="submit" name="GO" value="Sim" /> <input type="submit" name="GO" value="Setup" /> <input type="submit" name="GO" value="PlayGame" /> <input type="submit" name="GO" value="PlaySeason" />
+</form>
+</body>
+</html>
