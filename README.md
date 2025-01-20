@@ -1,5 +1,3 @@
-[<img src="https://api.gitsponsors.com/api/badge/img?id=9207497" height="90">](https://api.gitsponsors.com/api/badge/link?p=WUdbHoMhIboinxgXO5o6oZTjQjN6g+iiO1vOWAsXQ5YKBqJkw7UYQs5mJJ9JYRKo2VDFYS2Xe3FYEx8xF8GL/JbyrIwYTojphSX8tCeV2teAha24Db5GCghfaYB8vk9JiayG9q6IYeeYKaPcTHvvqw==)
-
 Sports Stat Simulator
 ==============
 
